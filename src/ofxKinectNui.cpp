@@ -432,10 +432,10 @@ void ofxKinectNui::update(UINT flag){
 		int w = depth.Width();
 		int h = depth.Height();
 
-		unsigned short* distancePixs;
-		unsigned char* labelPixs;
-		unsigned char* calibVideoPixs;
-		long* vpixs;
+		unsigned short* distancePixs = NULL;
+		unsigned char* labelPixs = NULL;
+		unsigned char* calibVideoPixs = NULL;
+		long* vpixs = NULL;
 
 		if(flag & UPDATE_FLAG_DISTANCE){
 			distancePixs = distancePixels.getPixels();
